@@ -1,4 +1,8 @@
 {
   "presets": ["airbnb", "@babel/preset-env", "@babel/preset-react"],
-  "plugins": ["react-hot-loader/babel","@babel/plugin-proposal-function-bind"]
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-proposal-class-properties"
+  ]
 }

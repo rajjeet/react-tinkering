@@ -7,6 +7,7 @@ import {ConnectedRouter, connectRouter, routerMiddleware} from "connected-react-
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from "redux";
 import {createLogger} from 'redux-logger';
+import sampleReducer from "./reducers/sampleReducer";
 
 const history = createBrowserHistory();
 const middleware = [
@@ -15,7 +16,8 @@ const middleware = [
 ];
 
 const rootReducer = combineReducers({
-    router: connectRouter(history)
+    router: connectRouter(history),
+    sample: sampleReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(...middleware));
