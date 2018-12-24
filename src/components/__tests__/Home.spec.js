@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "../Home";
-import {shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 
 describe('Home', () => {
 
@@ -24,4 +24,5 @@ describe('Home', () => {
         const wrapper = shallow(<Home metric={1337} />);
         expect(wrapper.find('.metric').text()).toContain('1337');
     });
+
 });

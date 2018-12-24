@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import Home from "../components/Home";
 import {addMetric} from "../actions/sampleActions";
 
-class HomePage extends React.Component {
+export class HomePage extends React.Component {
 
     handleStart = () => {
         this.props.addMetric(1);

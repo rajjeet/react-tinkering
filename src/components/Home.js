@@ -5,7 +5,7 @@ const Home = ({onAdd, metric}) => (
     <div>
         <h1>Home Page</h1>
         <br />
-        <button onClick={onAdd}>Add</button>
+        <button className="addMetricBtn" onClick={onAdd}>Add</button>
 
         <h3 className="metric">Metric: {metric}</h3>
         <Button text="SUBSCRIBE TO BASIC"/>
