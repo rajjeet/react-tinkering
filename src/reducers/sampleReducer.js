@@ -1,6 +1,6 @@
 import actionTypes from "../actions/actionTypes";
 
-const initialState = {
+export const initialState = {
     metric: 0
 };
 
