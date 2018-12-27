@@ -52,4 +52,13 @@ describe('Routes', () => {
         expect(wrapper.find('.about-container')).toHaveLength(1);
     });
 
+    it('renders only AppPage and WidgetPage when path is /widgets', () => {
+        const wrapper = setup('/widgets');
+
+        expect(wrapper.find('AppBar')).toHaveLength(1);
+        expect(wrapper.find('HomePage')).toHaveLength(0);
+        expect(wrapper.find('WidgetPage')).toHaveLength(1);
+    });
+
+
 });

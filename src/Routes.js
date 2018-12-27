@@ -2,6 +2,7 @@ import React from 'react';
 import {Route, Switch} from "react-router";
 import {Link} from 'react-router-dom';
 import HomePage from "./containers/HomePage";
+import WidgetPage from './containers/WidgetPage';
 import {hot} from 'react-hot-loader';
 
 export const Routes = () => (
@@ -11,6 +12,7 @@ export const Routes = () => (
             <Route exact path="/" render={() => <HomePage />}/>
             <Route exact path="/contact" render={() => <h1 className="contact-container">Contact</h1>}/>
             <Route exact path="/about" render={() => <h1 className="about-container">About</h1>}/>
+            <Route exact path="/widgets" render={() => <WidgetPage />}/>
         </Switch>
     </div>
 );
