@@ -17,9 +17,11 @@ export const Routes = () => (
     </div>
 );
 
-const AppBar = () => (
+export const AppBar = () => (
     <div>
         <Link to="/">Home</Link>
+        {' | '}
+        <Link to="/widgets">Widgets</Link>
         {' | '}
         <Link to="/contact">Contact</Link>
         {' | '}
