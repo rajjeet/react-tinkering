@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom';
 import HomePage from "./containers/HomePage";
 import {hot} from 'react-hot-loader';
 
-const Routes = () => (
+export const Routes = () => (
     <div>
         <Route path="/" render={() => <AppBar />}/>
         <Switch>
             <Route exact path="/" render={() => <HomePage />}/>
-            <Route exact path="/contact" render={() => <h1>Contact</h1>}/>
-            <Route exact path="/about" render={() => <h1>About</h1>}/>
+            <Route exact path="/contact" render={() => <h1 className="contact-container">Contact</h1>}/>
+            <Route exact path="/about" render={() => <h1 className="about-container">About</h1>}/>
         </Switch>
     </div>
 );
