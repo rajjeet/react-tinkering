@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
-import Home from "../components/Home";
-import {addMetric} from "../actions/sampleActions";
+import Home from "./Home";
+import {addMetric} from "../../actions/sampleActions";
 
 export class HomePage extends React.Component {
 

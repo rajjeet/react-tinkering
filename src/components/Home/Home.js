@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "./Button";
+import Button from "../Shared/Button";
 
 const Home = ({onAdd, metric}) => (
     <div>

@@ -1,10 +1,6 @@
 import actionTypes from "../actions/actionTypes";
 
-export const initialState = {
-    metric: 0
-};
-
-export default function sampleReducer(state = initialState, action) {
+export default function sampleReducer(state = {}, action) {
     switch (action.type) {
 
         case actionTypes.SAMPLE_ACTION_START:

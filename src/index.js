@@ -2,25 +2,15 @@ import './assets/index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
-import {createBrowserHistory} from "history";
-import {ConnectedRouter, connectRouter, routerMiddleware} from "connected-react-router";
+import {ConnectedRouter} from "connected-react-router";
 import {Provider} from 'react-redux';
-import {createStore, combineReducers, applyMiddleware} from "redux";
-import {createLogger} from 'redux-logger';
-import sampleReducer from "./reducers/sampleReducer";
+import configureStore from "./store/configureStore";
+import {createBrowserHistory} from "history";
+import initialState from "./store/initialState";
+
 
 const history = createBrowserHistory();
-const middleware = [
-    routerMiddleware(history),
-    createLogger({collapsed: true})
-];
-
-const rootReducer = combineReducers({
-    router: connectRouter(history),
-    sample: sampleReducer
-});
-
-const store = createStore(rootReducer, applyMiddleware(...middleware));
+const store = configureStore(history, initialState, true);
 
 ReactDOM.render(
     <Provider store={store}>

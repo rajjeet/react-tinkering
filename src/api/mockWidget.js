@@ -1,4 +1,4 @@
-const widgets = [
+export const widgets = [
     {
         id: '1',
         name: 'Widget 1',
@@ -24,7 +24,7 @@ class WidgetApi {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(Object.assign([], widgets));
-            }, 200);
+            }, 100);
         });
     }
 
@@ -45,7 +45,7 @@ class WidgetApi {
                 }
 
                 resolve(widget);
-            }, 200);
+            }, 100);
         });
     }
 
@@ -55,7 +55,7 @@ class WidgetApi {
                 const index = widgets.findIndex(w => w.id === widgetId);
                 widgets.splice(index, 1);
                 resolve();
-            }, 200);
+            }, 100);
         });
     }
 }

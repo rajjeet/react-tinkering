@@ -1,4 +1,5 @@
-import sampleReducer, {initialState} from '../sampleReducer';
+import sampleReducer from '../sampleReducer';
+import initialState from '../../store/initialState';
 import actionTypes from "../../actions/actionTypes";
 
 describe("sampleReducer", () => {
